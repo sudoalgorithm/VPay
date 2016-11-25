@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">VisaHackathon</string>
+    <string name="app_name">WePay</string>
+    <string name="facebook_app_id">618419768345987</string>
+
+    <string name="fb_login_protocol_scheme">fb618419768345987</string>
+
 </resources>
