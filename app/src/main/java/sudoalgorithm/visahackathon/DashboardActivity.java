@@ -15,6 +15,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.entity.StringEntity;
@@ -26,6 +28,7 @@ public class DashboardActivity extends AppCompatActivity {
     private ListView mListView;
     private CustomAdapter mCustomAdapter;
     private Integer[] img1, img2;
+    /*private Button btn;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,27 +43,43 @@ public class DashboardActivity extends AppCompatActivity {
             mActionBar.setDisplayShowTitleEnabled(false );
         }
 
-        /*img1 = new Integer[]{
-                R.drawable.starbucks,
+        img1 = new Integer[]{
+                R.drawable.careemlogo,
+                R.drawable.burjlogo,
+                R.drawable.mcd,
+                R.drawable.duber,
+                R.drawable.starbuckslogo
 
         };
 
+        img2 = new Integer[]{
+                R.drawable.careemface,
+                R.drawable.burjyface,
+                R.drawable.mcdonface,
+                R.drawable.uberface,
+                R.drawable.starryface
+
+        };
+
+
         List<ImageData> items = new ArrayList<ImageData>();
         for (int i = 0; i < img1.length; i++){
-            ImageData item = new ImageData(img1[i]);
+            ImageData item = new ImageData(img1[i],img2[i]);
             items.add(item);
         }
-
-
+        /*btn = (Button) findViewById(R.id.buy_btn);*/
         mListView = (ListView) findViewById(R.id.listView);
         mCustomAdapter = new CustomAdapter(this,items);
-        mListView.setAdapter(mCustomAdapter);*/
+        mListView.setAdapter(mCustomAdapter);
 
-        callVisaAPI();
-
+        /*btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callVisaAPI();
+            }
+        });*/
 
     }
-
 
     protected void callVisaAPI() {
         try {

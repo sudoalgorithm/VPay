@@ -5,10 +5,11 @@ package sudoalgorithm.visahackathon;
  */
 
 public class ImageData {
-    private int image1;
+    private int image1, image2;
 
-    public ImageData(int image1) {
+    public ImageData(int image1, int image2) {
         this.image1 = image1;
+        this.image2 = image2;
     }
 
     public int getImage1() {
@@ -20,4 +21,11 @@ public class ImageData {
         this.image1 = image1;
     }
 
+    public int getImage2() {
+        return image2;
+    }
+
+    public void setImage2(int image2) {
+        this.image2 = image2;
+    }
 }

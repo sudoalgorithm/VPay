@@ -25,7 +25,7 @@ public class CustomAdapter extends BaseAdapter {
     }
 
     private class ViewHolder {
-        ImageView imageView1;
+        ImageView imageView1,imageView2;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class CustomAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.cardview_layout, null);
             holder = new ViewHolder();
             holder.imageView1 = (ImageView) convertView.findViewById(R.id.imageView1);
-            //holder.ImageView2 = (ImageView) convertView.findViewById(R.id.imageView2);
+            holder.imageView2 = (ImageView) convertView.findViewById(R.id.imageView2);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -48,7 +48,11 @@ public class CustomAdapter extends BaseAdapter {
 
 
         holder.imageView1.setImageResource(rowItem.getImage1());
-        //holder.ImageView2.setImageResource(rowItem.getImage2());
+        holder.imageView2.setImageResource(rowItem.getImage2());
+
+
+
+
 
         return convertView;
     }
