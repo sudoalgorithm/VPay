@@ -11,7 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:layout_margin="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +25,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                >
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -42,14 +48,15 @@
                     />
             </LinearLayout>
 
-            <Button
+            <ImageButton
                 android:id="@+id/buy_btn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="BUY"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-            />
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/vbuy"
+                android:scaleType="centerInside"
+                android:layout_margin="10dp"
+                />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
