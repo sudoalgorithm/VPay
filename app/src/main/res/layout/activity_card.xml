@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sudoalgorithm.visahackathon.CardActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Choose Your Card"
+            android:layout_gravity="center"
+            android:textSize="17sp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/card1citi"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/citi" />
+
+        <ImageView
+            android:id="@+id/card2hsbc"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/hsbc"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="?attr/colorPrimary"
+        android:textColor="#FFFFFF"
+        />
+
+</LinearLayout>

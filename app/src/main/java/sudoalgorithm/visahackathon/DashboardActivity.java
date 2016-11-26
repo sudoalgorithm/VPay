@@ -1,10 +1,13 @@
 package sudoalgorithm.visahackathon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -28,7 +31,8 @@ public class DashboardActivity extends AppCompatActivity {
     private ListView mListView;
     private CustomAdapter mCustomAdapter;
     private Integer[] img1, img2;
-    /*private Button btn;*/
+    private Button btn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +71,7 @@ public class DashboardActivity extends AppCompatActivity {
             ImageData item = new ImageData(img1[i], img2[i]);
             items.add(item);
         }
-        /*btn = (Button) findViewById(R.id.buy_btn);*/
+
         mListView = (ListView) findViewById(R.id.listView);
         mCustomAdapter = new CustomAdapter(this, items);
 
@@ -92,6 +96,12 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });*/
 
+    }
+
+    public void btnBuy(View view){
+        Intent intent_info = new Intent(DashboardActivity.this,CardActivity.class);
+        startActivity(intent_info);
+        overridePendingTransition(R.anim.slide_up_info,R.anim.no_change);
     }
 
     protected void callVisaAPI() {

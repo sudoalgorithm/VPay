@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class CustomAdapter extends BaseAdapter {
 
     private Context context;
     private List<ImageData> rowItems;
+    private Button btn;
 
     public CustomAdapter(Context context, List<ImageData> items) {
         this.context = context;
@@ -50,12 +52,10 @@ public class CustomAdapter extends BaseAdapter {
         holder.imageView1.setImageResource(rowItem.getImage1());
         holder.imageView2.setImageResource(rowItem.getImage2());
 
-
-
-
-
         return convertView;
     }
+
+
 
     @Override
     public int getCount() {
