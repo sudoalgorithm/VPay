@@ -41,6 +41,10 @@
         </activity>
         <activity android:name=".DashboardActivity" />
         <activity android:name=".CardActivity" />
+        <activity android:name=".CitiBankCardActivity" />
+        <activity android:name=".HSBCCardActivity" />
+        <activity android:name=".QRScannerActivity" />
+        <activity android:name=".DisplayTextActivity"></activity>
     </application>
 
 </manifest>
