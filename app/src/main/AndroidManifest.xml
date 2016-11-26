@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DashboardActivity" />
-        <activity android:name=".CardActivity"></activity>
+        <activity android:name=".CardActivity" />
     </application>
 
 </manifest>
