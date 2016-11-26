@@ -56,6 +56,13 @@ public class DashboardActivity extends AppCompatActivity {
         mCustomAdapter = new CustomAdapter(this,items);
         mListView.setAdapter(mCustomAdapter);*/
 
+
+//IBM Watson Alchemy concept & keywords to find personal INTERESTS
+
+        //call VISA Merchant offers to find matching personalized offer recommendations
+
+
+        //call VISA mobile payment API
         callVisaAPI();
 
 

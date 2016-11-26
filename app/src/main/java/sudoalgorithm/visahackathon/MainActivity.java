@@ -4,12 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.RelativeLayout;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -36,6 +41,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 startActivity(new Intent(MainActivity.this, DashboardActivity.class));
+                /* make the Facebook User Feed API call */
+                new GraphRequest(
+                        AccessToken.getCurrentAccessToken(),
+                        "/me/feed",
+                        null,
+                        HttpMethod.GET,
+                        new GraphRequest.Callback() {
+                            public void onCompleted(GraphResponse response) {
+                                Log.d("mainActivityFACEBOOK", response.toString());
+                            }
+                        }
+                ).executeAsync();
             }
 
             @Override
