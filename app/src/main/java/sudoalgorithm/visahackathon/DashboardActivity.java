@@ -39,8 +39,8 @@ public class DashboardActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mActionBar = getSupportActionBar();
-        if (mActionBar != null){
-            mActionBar.setDisplayShowTitleEnabled(false );
+        if (mActionBar != null) {
+            mActionBar.setDisplayShowTitleEnabled(false);
         }
 
         img1 = new Integer[]{
@@ -63,27 +63,27 @@ public class DashboardActivity extends AppCompatActivity {
 
 
         List<ImageData> items = new ArrayList<ImageData>();
-        for (int i = 0; i < img1.length; i++){
-            ImageData item = new ImageData(img1[i],img2[i]);
+        for (int i = 0; i < img1.length; i++) {
+            ImageData item = new ImageData(img1[i], img2[i]);
             items.add(item);
         }
         /*btn = (Button) findViewById(R.id.buy_btn);*/
         mListView = (ListView) findViewById(R.id.listView);
-        mCustomAdapter = new CustomAdapter(this,items);
-<<<<<<< HEAD
+        mCustomAdapter = new CustomAdapter(this, items);
+
         mListView.setAdapter(mCustomAdapter);
-=======
-        mListView.setAdapter(mCustomAdapter);*/
+
+        mListView.setAdapter(mCustomAdapter);
 
 
-//IBM Watson Alchemy concept & keywords to find personal INTERESTS
+        //IBM Watson Alchemy concept & keywords to find personal INTERESTS
 
         //call VISA Merchant offers to find matching personalized offer recommendations
 
 
         //call VISA mobile payment API
-        callVisaAPI();
->>>>>>> 49919ecf25336cf38c0ac4cc0076671fbecf3c56
+
+
 
         /*btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,13 +132,13 @@ public class DashboardActivity extends AppCompatActivity {
                     "  \"transactionIdentifier\": \"381228649430015\"\n" +
                     "}\n" +
                     "}");
-            client.post(getApplicationContext(), "http://vdpwrapper.herokuapp.com/auth/api", se, "application/json",new  AsyncHttpResponseHandler(){
+            client.post(getApplicationContext(), "http://vdpwrapper.herokuapp.com/auth/api", se, "application/json", new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     String text = " ";
-                    
+
                     try {
-                         text = new JSONObject(new String(responseBody)).toString();
+                        text = new JSONObject(new String(responseBody)).toString();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -153,7 +153,7 @@ public class DashboardActivity extends AppCompatActivity {
                 }
 
 
-            } );
+            });
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
