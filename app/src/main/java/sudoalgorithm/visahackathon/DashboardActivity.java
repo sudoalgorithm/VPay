@@ -70,7 +70,20 @@ public class DashboardActivity extends AppCompatActivity {
         /*btn = (Button) findViewById(R.id.buy_btn);*/
         mListView = (ListView) findViewById(R.id.listView);
         mCustomAdapter = new CustomAdapter(this,items);
+<<<<<<< HEAD
         mListView.setAdapter(mCustomAdapter);
+=======
+        mListView.setAdapter(mCustomAdapter);*/
+
+
+//IBM Watson Alchemy concept & keywords to find personal INTERESTS
+
+        //call VISA Merchant offers to find matching personalized offer recommendations
+
+
+        //call VISA mobile payment API
+        callVisaAPI();
+>>>>>>> 49919ecf25336cf38c0ac4cc0076671fbecf3c56
 
         /*btn.setOnClickListener(new View.OnClickListener() {
             @Override
