@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -18,6 +19,9 @@ import com.facebook.HttpMethod;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
                         new GraphRequest.Callback() {
                             public void onCompleted(GraphResponse response) {
                                 Log.d("mainActivityFACEBOOK", response.toString());
+                                try {
+                                    Log.d("mainActivityFACEBOOK ", response.getJSONObject().getJSONArray("data").toString());
+                                    JSONArray fbPostsText = response.getJSONObject().getJSONArray("data");
+
+                                    for (int i = 0; i < fbPostsText.length(); ++i) {
+
+                                        Log.d("mainActivityFACEBOOK " + i, fbPostsText.getJSONObject(i).getString("messages"));
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
                 ).executeAsync();
