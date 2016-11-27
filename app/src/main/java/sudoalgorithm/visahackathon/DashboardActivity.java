@@ -82,7 +82,6 @@ public class DashboardActivity extends AppCompatActivity {
         im2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
 
@@ -103,12 +102,12 @@ public class DashboardActivity extends AppCompatActivity {
         });*/
 
     }
-
     public void btnBuy(View view){
 
+        Intent intent_info = new Intent(DashboardActivity.this, CardActivity.class);
+        startActivity(intent_info);
+        overridePendingTransition(R.anim.slide_up_info,R.anim.no_change);
+
     }
-
-
-
 
 }

@@ -44,7 +44,8 @@
         <activity android:name=".CitiBankCardActivity" />
         <activity android:name=".HSBCCardActivity" />
         <activity android:name=".QRScannerActivity" />
-        <activity android:name=".DisplayTextActivity"></activity>
+        <activity android:name=".DisplayTextActivity" />
+        <activity android:name=".SuccessActivity"></activity>
     </application>
 
 </manifest>

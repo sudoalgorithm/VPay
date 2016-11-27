@@ -35,4 +35,5 @@ dependencies {
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.dlazaro66.qrcodereaderview:qrcodereaderview:1.0.0'
     testCompile 'junit:junit:4.12'
+
 }
